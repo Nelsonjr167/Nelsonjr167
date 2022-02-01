@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Jacks"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-12 08:53:40 AM"/>
+        <attribute name="created" value="SmFja3M7VEFKQVkyMDAwOzIwMjEtMTAtMDU7MDg6Mzk6MDUgQU07MjMyOA=="/>
+        <attribute name="edited" value="SmFja3M7VEFKQVkyMDAwOzIwMjEtMTAtMDU7MDk6MjY6MTIgQU07MTsyNDMx"/>
+        <attribute name="edited" value="YWd1aW47REVTS1RPUC1PQ1VUT0Y0OzIwMjEtMTAtMTI7MDg6NTM6NDAgQU07MTsyOTk3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A" type="Integer" array="False" size=""/>
+            <declare name="B" type="Integer" array="False" size=""/>
+            <declare name="C" type="Integer" array="False" size=""/>
+            <declare name="small" type="Integer" array="False" size=""/>
+            <declare name="medium" type="Integer" array="False" size=""/>
+            <declare name="large" type="Integer" array="False" size=""/>
+            <assign variable="A" expression="1"/>
+            <while expression="A&lt;4">
+                <output expression="&quot;enter 3 numbers and i will tell you the small, medium and large&quot;" newline="True"/>
+                <output expression="&quot;enter your first number&quot;" newline="True"/>
+                <input variable="A"/>
+                <output expression="&quot;enter your second number&quot;" newline="True"/>
+                <input variable="B"/>
+                <output expression="&quot;enter your third number&quot;" newline="True"/>
+                <input variable="C"/>
+                <assign variable="small" expression="A"/>
+                <if expression="B&lt;small">
+                    <then>
+                        <assign variable="small" expression="B"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="C&lt;small">
+                    <then>
+                        <assign variable="c" expression="small"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="large" expression="A"/>
+                <if expression="B&gt;large">
+                    <then>
+                        <assign variable="large" expression="B"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="C&gt;large">
+                    <then>
+                        <assign variable="large" expression="C"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="A!=small&amp;&amp;A!=large">
+                    <then>
+                        <assign variable="medium" expression="A"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="B!=small&amp;&amp;B!=large">
+                    <then>
+                        <assign variable="medium" expression="B"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="C!=small&amp;&amp;C!=large">
+                    <then>
+                        <assign variable="medium" expression="C"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;small=&quot;&amp;small" newline="True"/>
+                <output expression="&quot;medium=&quot;&amp;medium" newline="True"/>
+                <output expression="&quot;large=&quot;&amp;large" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

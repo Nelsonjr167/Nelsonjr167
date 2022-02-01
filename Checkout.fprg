@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="aguin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-25 08:57:55 PM"/>
+        <attribute name="created" value="YWd1aW47REVTS1RPUC1PQ1VUT0Y0OzIwMjEtMTAtMTM7MTE6Mzc6MzAgQU07Mjg4NQ=="/>
+        <attribute name="edited" value="YWd1aW47REVTS1RPUC1PQ1VUT0Y0OzIwMjEtMTAtMjU7MTI6NTM6MjggUE07MTthZ3VpbjtERVNLVE9QLU9DVVRPRjQ7MjAyMS0xMC0xMzsxMTozNzozMCBBTTtDaGVja291dCAtIENvcHkuZnByZzs3ODM5"/>
+        <attribute name="edited" value="YWd1aW47REVTS1RPUC1PQ1VUT0Y0OzIwMjEtMTAtMjU7MDg6NTc6NTUgUE07MTE7MzA3NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="MaximumSpend" type="Real" array="False" size=""/>
+            <declare name="Itemnumber" type="Integer" array="False" size=""/>
+            <declare name="Checkout" type="Real" array="False" size=""/>
+            <assign variable="Checkout" expression="0"/>
+            <declare name="Price" type="Real" array="False" size=""/>
+            <declare name="Discountno" type="Integer" array="False" size=""/>
+            <declare name="Discount" type="Integer" array="False" size=""/>
+            <declare name="Itemprice" type="Real" array="False" size=""/>
+            <declare name="Balance" type="Real" array="False" size=""/>
+            <declare name="Quantity" type="Real" array="False" size=""/>
+            <declare name="Tax" type="Real" array="False" size=""/>
+            <declare name="Total" type="Integer" array="False" size=""/>
+            <assign variable="Total" expression="0"/>
+            <declare name="Number" type="Real" array="False" size=""/>
+            <assign variable="Number" expression="0"/>
+            <declare name="Subtotal" type="Integer" array="False" size=""/>
+            <assign variable="Subtotal" expression="0"/>
+            <declare name="Grandtotal" type="Integer" array="False" size=""/>
+            <output expression="&quot;Welcome&quot;" newline="True"/>
+            <output expression="&quot;What is your Maximum Spend?&quot;" newline="True"/>
+            <input variable="MaximumSpend"/>
+            <output expression="&quot;You have $ &quot;&amp;MaximumSpend&amp;&quot; to spend&quot;" newline="True"/>
+            <do expression="Itemnumber!=0">
+                <output expression="&quot;Select your items by choosing the number of item from the list below or 0 to check out. &#13;&#10;(1) Roses for $75 per half dozen with a 25% discount  &#13;&#10;(2) Hair extensions $100 per pack with a 10% discount  &#13;&#10;(3) Male jeans each at $150 &#13;&#10;(4) Female jeans each at $175 with a 5% discount &#13;&#10;(5) Jordans for $200 each&quot;" newline="True"/>
+                <input variable="Itemnumber"/>
+                <if expression="Itemnumber=0">
+                    <then>
+                        <assign variable="Grandtotal" expression="Tax+(Maximumspend-Balance)"/>
+                        <output expression="&quot;You have successfully checked out and your Grand total is $&quot; &amp;Grandtotal&amp; &quot; after 7% taxation&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="Itemnumber=1">
+                            <then>
+                                <assign variable="Price" expression="75"/>
+                                <output expression="&quot;How many of this item do you want?&quot;" newline="True"/>
+                                <input variable="Quantity"/>
+                                <assign variable="Itemprice" expression="(75-0.25*75)*Quantity"/>
+                                <output expression="&quot;The price of this item is $&quot; &amp;Price&amp; &quot; and it has a 25% discount&#13;&#10;Your new price is $&quot; &amp;Itemprice" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <if expression="Itemnumber=2">
+                            <then>
+                                <assign variable="Price" expression="100"/>
+                                <output expression="&quot;How many of this item do you want?&quot;" newline="True"/>
+                                <input variable="Quantity"/>
+                                <assign variable="Itemprice" expression="(100-0.1*100)*Quantity"/>
+                                <output expression="&quot;The price of this item is $&quot; &amp;Price&amp; &quot; and it has a 10% discount&#13;&#10;Your new price is $&quot; &amp;Itemprice" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <if expression="Itemnumber=3">
+                            <then>
+                                <assign variable="Price" expression="150"/>
+                                <output expression="&quot;How many of this item do you want?&quot;" newline="True"/>
+                                <input variable="Quantity"/>
+                                <assign variable="Itemprice" expression="Price*Quantity"/>
+                                <output expression="&quot;The price of this item is $&quot; &amp;Itemprice" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <if expression="Itemnumber=4">
+                            <then>
+                                <assign variable="Price" expression="175"/>
+                                <output expression="&quot;How many of this item do you want?&quot;" newline="True"/>
+                                <input variable="Quantity"/>
+                                <assign variable="Itemprice" expression="(175-175*0.05)*Quantity"/>
+                                <output expression="&quot;The price of this item is $&quot; &amp;Price&amp; &quot; and it has a 5% discount&#13;&#10;Your new price is $&quot; &amp;Itemprice" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <if expression="Itemnumber=5">
+                            <then>
+                                <assign variable="Price" expression="200"/>
+                                <output expression="&quot;How many of this item do you want?&quot;" newline="True"/>
+                                <input variable="Quantity"/>
+                                <assign variable="Itemprice" expression="Price*Quantity"/>
+                                <output expression="&quot;The price of this item is $&quot; &amp;Itemprice" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <assign variable="Number" expression="Quantity+Number"/>
+                        <assign variable="Subtotal" expression="Itemprice+Subtotal"/>
+                        <assign variable="Balance" expression="Maximumspend-Subtotal"/>
+                        <assign variable="Tax" expression="(Maximumspend-Balance)*0.07"/>
+                        <if expression="Balance&lt;=0">
+                            <then>
+                                <output expression="&quot;You have insufficient balance to complete this purchace choose another item or press 0 to proceed to checkout&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;You have &quot; &amp;Number&amp; &quot; items on your cart and you have $&quot; &amp;Balance&amp; &quot; left on your budget&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </do>
+            <output expression="&quot;Goodbye&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

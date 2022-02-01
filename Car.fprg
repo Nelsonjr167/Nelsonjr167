@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="aguin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-07 08:53:40 AM"/>
+        <attribute name="created" value="YWd1aW47REVTS1RPUC1PQ1VUT0Y0OzIwMjEtMTAtMDc7MDg6Mzg6MjYgQU07MjkwMA=="/>
+        <attribute name="edited" value="YWd1aW47REVTS1RPUC1PQ1VUT0Y0OzIwMjEtMTAtMDc7MDg6NTM6NDAgQU07MTszMDAx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Miles" type="Integer" array="False" size=""/>
+            <declare name="Gallons" type="Integer" array="False" size=""/>
+            <output expression="&quot;How many Gallons of Gas would you like?&quot;" newline="True"/>
+            <input variable="Gallons"/>
+            <assign variable="Miles" expression="Gallons*20"/>
+            <output expression="&quot;You will go &quot;&amp;Miles&amp; &quot; miles before you run out of gas&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
