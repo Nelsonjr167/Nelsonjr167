@@ -1,10 +1,3 @@
-- 👋 Hi, I’m @Nelsonjr167
-- 👀 I’m interested in python
-- 🌱 I’m currently learning  C++
-- 💞️ I’m looking to collaborate on python
-- 📫 How to reach me 
+# Nelson - About Me
 
-<!---
-Nelsonjr167/Nelsonjr167 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+Computer Science Major and Cybersecurity Minor. Currently learning C++, I am intrested in Python and would like to collaborate on it.
